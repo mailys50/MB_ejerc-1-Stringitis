@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<div  id="reve">
+    <p id="demo" onclick="myFunction()">Click me to change my text color.</p>
+
+</div>
+   
+    <script>
+        function myFunction() {
+            const uno = document.getElementsByTagName("P")[0];
+            const dos = document.createElement("input");
+            dos.value = uno.innerHTML
+            uno.parentNode.replaceChild(dos, uno);
+            // uno.parentNode.removeChild(uno);
+            myReverse();
+        };
+        function myReverse() {
+
+       document.getElementById("reve").addEventListener("keyup", function (event) {
+        //    console.log(event.target.value);
+            // highlight the mouseover target
+            const dos = document.createElement("p");
+            let uno = event.target.value
+            console.log(uno);
+            dos.innerHTML = uno
+          
+            console.log(dos);
+           dos.parentNode.replaceChild(uno, dos);
+       
+
+           });
+        };
+
+// console.log(myFunction());
+    </script>
+
+</body>
+
+</html>
